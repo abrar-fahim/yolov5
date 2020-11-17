@@ -80,7 +80,7 @@ def train(hyp, opt, device, tb_writer=None):
         model = Model(opt.cfg, ch=3, nc=nc).to(device)  # create
 
     # Freeze
-    freeze = ['', ]  # parameter names to freeze (full or partial)
+    # freeze = ['', ]  # parameter names to freeze (full or partial)
 
     freeze = ['model.%s' % x for x in range(10)]
     if any(freeze):
